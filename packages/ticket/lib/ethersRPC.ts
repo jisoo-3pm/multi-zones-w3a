@@ -16,7 +16,7 @@ export default class EthereumRpc {
       const networkDetails = await this.ethersProvider.getNetwork();
       return networkDetails.chainId;
     } catch (error) {
-      throw error.message;
+      throw error;
     }
   }
 
@@ -29,7 +29,7 @@ export default class EthereumRpc {
 
       return address;
     } catch (error) {
-      throw error.message;
+      throw error;
     }
   }
 
@@ -40,7 +40,7 @@ export default class EthereumRpc {
 
       return balance;
     } catch (error) {
-      throw error.message;
+      throw error;
     }
   }
 
@@ -68,7 +68,7 @@ export default class EthereumRpc {
 
       return privateKey;
     } catch (error) {
-      throw error.message;
+      throw error;
     }
   }
 }
