@@ -1,5 +1,6 @@
-const MUSIC_URL = process.env.MUSIC_URL || "http://localhost:3001";
-const TICKET_URL = process.env.TICKET_URL || "http://localhost:3002";
+const MUSIC_URL = process.env.NEXT_PUBLIC_MUSIC_URL || "http://localhost:3001";
+const TICKET_URL =
+  process.env.NEXT_PUBLIC_TICKET_URL || "http://localhost:3002";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
