@@ -1,14 +1,15 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import dynamic from "next/dynamic";
+import type { NextPage } from "next";
 
-const inter = Inter({ subsets: ['latin'] })
+const App = dynamic(
+  () => {
+    return import("../components/App");
+  },
+  { ssr: false }
+);
 
-export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      뮤직 홈
-    </main>
-  );
-}
+const Home: NextPage = () => {
+  return <App />;
+};
+
+export default Home;
