@@ -148,7 +148,6 @@ function App() {
   const loggedInView = (
     <>
       <div className="flex-container">
-        <h1>Common</h1>
         <h2>{accounts}</h2>
         <div>
           <button onClick={getUserInfo} className="card">
@@ -180,6 +179,7 @@ function App() {
 
   return (
     <div className="container">
+      <h1>Common</h1>
       <div className="grid">
         {web3auth?.status === "connected" ? loggedInView : unloggedInView}
       </div>

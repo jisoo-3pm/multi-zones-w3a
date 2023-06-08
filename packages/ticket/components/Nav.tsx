@@ -22,6 +22,11 @@ export default function Nav() {
             <a>Ticket</a>
           </Link>
         </li>
+        <li>
+          <Link href={`/detail`}>
+            <a>Ticket Detail</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
